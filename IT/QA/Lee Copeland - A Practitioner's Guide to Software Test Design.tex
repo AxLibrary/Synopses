@@ -13,7 +13,6 @@
 \date{2016/07/25}
 \maketitle
 
-\tableofcontents
 \newpage
 \section*{The Testing Process}
 \textbf{Testing} is a concurrent life cycle process of engineering, using, and maintaining testware in order to measure and improve the quality of the software being tested.
@@ -23,9 +22,27 @@
 \textbf{White box testing} is a strategy in which testing is based on the internal paths, structure, and implementations of the software under test.
 \\
 \textbf{Four testing levels}: Unit, Integration, System, Acceptance.
+
 \section*{Black Box Testing Techniques}
 \begin{itemize}
 \item When using black box testing, the tester can never be sure of how much of the system under test has been tested.
 \item Even though we can't test everything, formal black box testing directs the tester to choose subsets of tests that are both efficient and effective in finding defects.
+\end{itemize}
+
+\section*{Equivalence Class Testing}
+\textbf{Equivalence class} consists of a set of data that is treated the same by the module or that should produce the same result. We would expect that:
+\begin{itemize}
+\item If one test in an equivalence class detects a defect, all other test cases in the same equivalence class are likely to detect the same defect.
+\item If one test in an equivalence class doesn't detect a defect, no other test cases in the same equivalence class is likely to detect the defect.
+\end{itemize}
+\textbf{Testing-by-contract} is based on the design-by-contract philosophy. Its approach is to create test cases only for the situations in which the preconditions are met.
+\\
+\textbf{Defensive testing} --- an approach to create tests under both normal and abnormal preconditions.
+\\
+Another approach to using equivalence classes is to \textbf{examine outputs} rather than inputs. Divide the outputs into equivalence classes, then determine what input values would cause those outputs.
+\subsection*{Technique:}
+\begin{itemize}
+\item Identify the equivalence classes.
+\item Create a test case for each equivalent class.
 \end{itemize}
 \end{document}
