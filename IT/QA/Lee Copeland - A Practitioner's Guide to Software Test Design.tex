@@ -45,4 +45,18 @@ Another approach to using equivalence classes is to \textbf{examine outputs} rat
 \item Identify the equivalence classes.
 \item Create a test case for each equivalent class.
 \end{itemize}
+
+\section*{Boundary Value Testing}
+\textbf{Boundary value testing} focuses on the boundaries because that is where many defects hide. Create test cases for each boundary value by choosing one point on the boundary, one point just below the boundary, and one point just above the boundary.
+\subsection*{Technique:}
+\begin{itemize}
+\item Identify the equivalence classes.
+\item Identify the boundaries of each equivalence class.
+\item Create test case for each boundary value by choosing one point on the boundary, one point just below the boundary, and one point just above the boundary.
+\end{itemize}
+
+\section*{Decision Table Testing}
+\textbf{Decision table} are used to document complex business rules, that system must implement. Conditions represent various input conditions, actions are the processes that should be executed depending on the various combinations of input conditions. Each rule defines a unique combination of conditions that results in the execution of the actions, associated with that rule. 
+\\
+Create at least one test for each rule. If the rule's conditions are binary, a single test for each combination is probably sufficient. If a condition is a range of values, consider testing at both the low and high end of the range.
 \end{document}
