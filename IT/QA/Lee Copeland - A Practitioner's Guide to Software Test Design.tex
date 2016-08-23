@@ -64,4 +64,12 @@ Create at least one test for each rule. If the rule's conditions are binary, a s
 An \textbf{orthogonal array} is a two-dimensional array of numbers that has this interesting property --- choose any two columns in the array, all the combinations will occur in every column pair.
 \\
 \textbf{All pairs algorithm} generates the pairs without resorting to an "external" device like an orthogonal array.
+
+\section*{State-Transition Testing}
+\textbf{State-Transition diagrams} direct our testing effort by identifying the states, events, actions, and transitions that should be tested. Together, these define how a system interacts with outside world, the events it processes, and the valid and invalid order of these events.
+\\
+The generally recommended level of testing using state-transition diagrams is to create a set of test cases such that all transitions are exercised at least once under test. In high-risk systems, you may want to create even more test cases, approaching all paths if possible.
+
+\section*{Domain Analysis Testing}
+\textbf{Domain analysis} is a technique that can be used to identify efficient and effective test cases when multiple variables should be tested together.
 \end{document}
