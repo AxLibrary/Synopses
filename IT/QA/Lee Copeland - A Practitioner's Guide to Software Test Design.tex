@@ -76,4 +76,24 @@ The generally recommended level of testing using state-transition diagrams is to
 In builds on and generalizes equivalence class and boundary value testing to N simultaneous dimensions. Like those techniques, we are searching for situations where the boundary has been implemented incorrectly.
 \\
 In using the 1x1 domain analysis technique for each relational condition ($\geq, >, \leq, or <$) we choose one \textbf{on} point and one \textbf{off} point.For each strict equality condition (=) we choose one \textbf{on} point and two \textbf{off} points, one slightly less than the conditional value and one slightly greater than the value.
+
+\section*{Use Case Testing}
+A \textbf{use case} is a scenario that describes the use of a system by an actor to accomplish a specific goal.
+\\
+A major component of transaction testing is a test data. Boris Beizer suggest that 30 percents to 40 percents of the effort in transaction testing is generating, capturing or extracting test data.
+\\
+While creating at least one test case for the main success scenario and at least one for each extension provides some level of test coverage, it is clear that, no matter how we try, most input combinations will remain untested.
+
+\section*{White Box Testing Techniques}
+When using \textbf{white box testing}, the tester can be sure that every path trough the software under test has been identified and tested.
+\\
+White box testing has four distinct disadvantages:
+\begin{itemize}
+\item The number of the execution paths may be so large that they cannot all be tested.
+\item The test cases chosen may not detect data sensitive errors.
+\item White box testing assumes the control flow is correct (or very close to correct). Since the tests are based on the existing paths, nonexistent paths cannot be discovered.
+\item The tester must have programming skills to understand and evaluate the software under test.
+\end{itemize}
+
+
 \end{document}
