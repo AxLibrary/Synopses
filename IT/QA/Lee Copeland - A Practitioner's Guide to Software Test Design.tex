@@ -29,7 +29,7 @@
 \item Even though we can't test everything, formal black box testing directs the tester to choose subsets of tests that are both efficient and effective in finding defects.
 \end{itemize}
 
-\section*{Equivalence Class Testing}
+\subsection*{Equivalence Class Testing}
 \textbf{Equivalence class} consists of a set of data that is treated the same by the module or that should produce the same result. We would expect that:
 \begin{itemize}
 \item If one test in an equivalence class detects a defect, all other test cases in the same equivalence class are likely to detect the same defect.
@@ -40,44 +40,44 @@
 \textbf{Defensive testing} --- an approach to create tests under both normal and abnormal preconditions.
 \\
 Another approach to using equivalence classes is to \textbf{examine outputs} rather than inputs. Divide the outputs into equivalence classes, then determine what input values would cause those outputs.
-\subsection*{Technique:}
+\subsubsection*{Technique:}
 \begin{itemize}
 \item Identify the equivalence classes.
 \item Create a test case for each equivalent class.
 \end{itemize}
 
-\section*{Boundary Value Testing}
+\subsection*{Boundary Value Testing}
 \textbf{Boundary value testing} focuses on the boundaries because that is where many defects hide. Create test cases for each boundary value by choosing one point on the boundary, one point just below the boundary, and one point just above the boundary.
-\subsection*{Technique:}
+\subsubsection*{Technique:}
 \begin{itemize}
 \item Identify the equivalence classes.
 \item Identify the boundaries of each equivalence class.
 \item Create test case for each boundary value by choosing one point on the boundary, one point just below the boundary, and one point just above the boundary.
 \end{itemize}
 
-\section*{Decision Table Testing}
+\subsection*{Decision Table Testing}
 \textbf{Decision table} are used to document complex business rules, that system must implement. Conditions represent various input conditions, actions are the processes that should be executed depending on the various combinations of input conditions. Each rule defines a unique combination of conditions that results in the execution of the actions, associated with that rule. 
 \\
 Create at least one test for each rule. If the rule's conditions are binary, a single test for each combination is probably sufficient. If a condition is a range of values, consider testing at both the low and high end of the range.
 
-\section*{Pairwise Testing}
+\subsection*{Pairwise Testing}
 An \textbf{orthogonal array} is a two-dimensional array of numbers that has this interesting property --- choose any two columns in the array, all the combinations will occur in every column pair.
 \\
 \textbf{All pairs algorithm} generates the pairs without resorting to an "external" device like an orthogonal array.
 
-\section*{State-Transition Testing}
+\subsection*{State-Transition Testing}
 \textbf{State-Transition diagrams} direct our testing effort by identifying the states, events, actions, and transitions that should be tested. Together, these define how a system interacts with outside world, the events it processes, and the valid and invalid order of these events.
 \\
 The generally recommended level of testing using state-transition diagrams is to create a set of test cases such that all transitions are exercised at least once under test. In high-risk systems, you may want to create even more test cases, approaching all paths if possible.
 
-\section*{Domain Analysis Testing}
+\subsection*{Domain Analysis Testing}
 \textbf{Domain analysis} is a technique that can be used to identify efficient and effective test cases when multiple variables should be tested together.
 \\
 In builds on and generalizes equivalence class and boundary value testing to N simultaneous dimensions. Like those techniques, we are searching for situations where the boundary has been implemented incorrectly.
 \\
 In using the 1x1 domain analysis technique for each relational condition ($\geq, >, \leq, or <$) we choose one \textbf{on} point and one \textbf{off} point.For each strict equality condition (=) we choose one \textbf{on} point and two \textbf{off} points, one slightly less than the conditional value and one slightly greater than the value.
 
-\section*{Use Case Testing}
+\subsection*{Use Case Testing}
 A \textbf{use case} is a scenario that describes the use of a system by an actor to accomplish a specific goal.
 \\
 A major component of transaction testing is a test data. Boris Beizer suggest that 30 percents to 40 percents of the effort in transaction testing is generating, capturing or extracting test data.
@@ -95,8 +95,41 @@ White box testing has four distinct disadvantages:
 \item The tester must have programming skills to understand and evaluate the software under test.
 \end{itemize}
 
-\section*{Control Flow Testing}
+\subsection*{Control Flow Testing}
 \textbf{Control Flow} testing identifies the execution paths through module of program code and then creates and executes test cases to cover those paths.
 \\
 Control flow graphs are the foundation of control flow testing. Modules of code are converted to graphs, the paths through the graphs are analyzed, and test cases are created from that analysis.
+
+\subsection*{Data Flow Testing}
+\textbf{Data flow testing} builds on and expands control flow testing technique. A data flow graph is similar to a control flow graph in that it shows the processing flow through a module. In addition, it details the definition, use, and destruction of each of the module's variables. We will construct these diagrams and verify that define-use-kill patterns are appropriate.
+
+\section*{Testing Paradigms}
+\subsection*{Scripted Testing}
+\textbf{Scripted testing} emerged as one of the component parts of the Waterfall model of software development.
+\\
+IEEE Std 829-1998, the "IEEE Standard for Software Test Documentation", defines eight document, that can be used in testing:
+\begin{itemize}
+\item Test plan
+\item Test design specification
+\item Test case specification
+\item Test procedure specification
+\item Test item transmittal report
+\item Test log
+\item Test incident report
+\item Test summary report
+\end{itemize}
+
+\subsection*{Exploratory Testing}
+To the extent that the next test we do is influenced by the result of the last test we did, we are doing \textbf{exploratory testing}. We become more exploratory when we can't tell what tests should be run, in advance of the test cycle.
+\\
+Key question --- what is the most important test I can perform right now?
+\\
+Exploratory testing can be done within a "timebox", an uninterrupted block of time devoted to testing. These are typically between sixty and 120 minutes in length. When performing "chartered exploratory testing", a charter is first created to guide the tester within the timebox. This charter defines a clear mission for the testing session. The charter is a guideline to be used, not a script to be followed.
+
+\subsection*{Test Planning}
+In \textbf{adaptive planning} we plan as much as we can (based on the knowledge available), when we can (based on the time and resources available), but not before.
+\\
+Since planning is ongoing process, it's better to think of a plan as an interim product based on the information and understanding known at the moment and always subject to revision as new information and understanding change.
+\\
+The use of the scripted testing does n't preclude the use of the exploratory testing. The use of exploratory testing does n't preclude the use of scripted testing. Smart testers use whatever tool in their toolbox is required.
 \end{document}
