@@ -51,11 +51,28 @@
 	\end{center}
 	}
 \newcommand{\define}[2]{
-	\begin{flushright} D:
-	\begin{minipage}{0.96\textwidth}
-		\large
-		\textbf{#1} \\\\\\--- #2
-	\end{minipage}\end{flushright}
+	\textbf{#1} --- #2
+	}
+\newcommand{\definewithmark}[2]{
+	\begin{flushright}\textbf{!}\hspace{2ex}\vline\hspace{2ex}
+		\begin{minipage}{0.9\textwidth}
+			\define{#1}{#2}
+		\end{minipage}
+	\end{flushright}
+	}
+\newcommand{\question}[2]{
+	\begin{flushright}
+		Q:\hspace{2ex}\vline\hspace{2ex}
+		\begin{minipage}{0.9\textwidth}
+			\large
+			\textit{#1}
+		\end{minipage}
+	\end{flushright}
+	\begin{center}
+		\begin{minipage}{0.95\textwidth}
+			#2
+		\end{minipage}
+	\end{center}
 	}
 \begin{document}
 \title{Ф.П. Тарасенко}{Прикладной системный анализ}
