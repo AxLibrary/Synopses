@@ -1,0 +1,88 @@
+\documentclass{article}
+% Кодировка, поддержка русского языка
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+% Отступы от края страницы
+\usepackage{geometry}
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+\geometry{bindingoffset=0cm}
+% Вложенные списки
+\usepackage[ampersand]{easylist}
+\ListProperties(Hide=100,Hang=true,Progressive=3.5ex,Style*=$\triangleright$ )
+
+\newcommand{\note}[1]{\textit{#1}}
+\newcommand{\important}[1]{\textbf{#1}}
+\newcommand{\enquote}[1]{,,#1''}
+\renewcommand{\section}[2]{
+	\vspace{6em}
+	\begin{flushright}
+	\Large
+	\baselineskip=0.5\baselineskip
+	\textbf{#1}
+	\\
+	\rule[0.5\baselineskip]{\textwidth}{0.15pt}
+	\\
+	\textbf{#2}
+	\end{flushright}
+	}
+\renewcommand{\subsection}[1]{
+	\vspace{2em}
+	\begin{flushright}
+		\large
+		\textbf{#1}
+	\end{flushright}
+	}
+\renewcommand{\title}[2]{
+	\begin{center}
+		\LARGE
+		\baselineskip=0.5\baselineskip
+		\textbf{#1}
+		\\
+		\rule[0.5\baselineskip]{0.7\textwidth}{0.15pt}
+		\\
+		\textbf{#2}
+		\\\baselineskip=2\baselineskip(конспект)		
+	\end{center}
+	}
+\newcommand{\define}[2]{
+	\textbf{#1} --- #2
+	}
+\begin{document}
+\title{Д. Уиттакер}{Как тестируют в Google}
+\section{Глава 1}{Первое знакомство с организацией тестирования в Google}
+\begin{easylist}
+& Тестирование неотделимо от разработки.
+&& Одним тестированием качества не добиться.
+& Роли в разработке.
+&& Разработчик.
+&&& Пишет много тестового кода.
+&&& TDD и юнит-тестирование.
+&&& Отвечает за фичи приложения и их качество.
+&& Разработчик в тестировании.
+&&& Тестируемость кода.
+&&& Создание инфраструктуры тестирования.
+&&& Анализ архитектуры, качества кода и рисков проекта.
+&&& Заинтересован в улучшении качества и тестового покрытия.
+&&& Отвечает за фичи тестирования.
+&& Инженер по тестированию.
+&&& Пользователи на первом месте.
+&&& Организуют работу по тестированию.
+&&& Управляют выполнением тестов.
+&&& Интерпретируют результаты тестов.
+& Организационная структура.
+&& Тестирование находится в отдельном горизонтальном направлении.
+&& Существует параллельно с продуктовыми направлениями.
+&& Временно поступают к командам разработки.
+&& Назначают руководители направления продуктивности разработки (тестирования).
+& Релизы.
+&& Канареечный канал --- ежедневные сборки.
+&& Канал разработки --- используется в повседневной работе.
+&& Тестовый канал --- для внутренних пользователей.
+&& Бета-канал --- стабильные сборки, первые доступны пользователям.
+& Виды тестов.
+\end{easylist}
+\end{document}
